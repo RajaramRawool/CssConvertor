@@ -1,20 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
     tools:context=".MainActivity">
 
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
         app:srcCompat="@drawable/css_convertor_logo" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/convert_between_css_units"
+        android:layout_marginTop="50dp"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textColor="@color/convertor_gray_dark"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pixels_ems_points"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/convertor_blue"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <EditText
+        android:id="@+id/pixels"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginEnd="60dp"
+        android:text="@string/px"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:background="@color/convertor_gray_light"
+        android:textColor="@color/white"/>
+
+        <EditText
+        android:id="@+id/em"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:text="@string/em"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:background="@color/convertor_gray_light"
+        android:textColor="@color/white" />
+
+        <EditText
+        android:id="@+id/points"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginStart="60dp"
+        android:text="@string/pt"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:background="@color/convertor_gray_light"
+        android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

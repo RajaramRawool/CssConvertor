@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">CssConvertor</string>
+    <string name="convert_between_css_units">Convert between CSS units :-</string>
+    <string name="pixels_ems_points">pixels, ems, points</string>
+    <string name="px">px</string>
+    <string name="em">Em</string>
+    <string name="pt">pt</string>
 </resources>
