@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".MainActivity">
+    android:gravity="center_horizontal"
+    tools:context=".ActivityMain">
 
 
     <ImageView
@@ -53,7 +54,8 @@
         android:layout_height="50dp"
         android:layout_marginRight="60dp"
         android:layout_marginEnd="60dp"
-        android:text="@string/px"
+        android:hint="@string/px"
+        android:inputType="number"
         android:gravity="center"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -64,7 +66,8 @@
         android:id="@+id/em"
         android:layout_width="80dp"
         android:layout_height="50dp"
-        android:text="@string/em"
+        android:hint="@string/em"
+        android:inputType="number"
         android:gravity="center"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -77,7 +80,8 @@
         android:layout_height="50dp"
         android:layout_marginLeft="60dp"
         android:layout_marginStart="60dp"
-        android:text="@string/pt"
+        android:hint="@string/pt"
+        android:inputType="number"
         android:gravity="center"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -86,6 +90,14 @@
 
     </LinearLayout>
 
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:text="Calculate" />
 
 
 </LinearLayout>
