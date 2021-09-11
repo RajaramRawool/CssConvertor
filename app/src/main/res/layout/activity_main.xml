@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
     android:padding="20dp"
-    android:gravity="center_horizontal"
     tools:context=".ActivityMain">
 
 
@@ -20,73 +20,119 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/convert_between_css_units"
         android:layout_marginTop="50dp"
-        android:textSize="18sp"
-        android:textAlignment="center"
         android:gravity="center_horizontal"
-        android:textStyle="bold"
+        android:text="@string/convert_between_css_units"
+        android:textAlignment="center"
         android:textColor="@color/convertor_gray_dark"
-        />
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/pixels_ems_points"
         android:layout_gravity="center_horizontal"
+        android:text="@string/pixels_ems_points"
         android:textAlignment="center"
+        android:textColor="@color/convertor_blue"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:textColor="@color/convertor_blue"
 
         />
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:gravity="center"
+        android:layout_marginTop="50dp"
         android:orientation="horizontal">
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_weight="1">
 
-        <EditText
-        android:id="@+id/pixels"
-        android:layout_width="80dp"
-        android:layout_height="50dp"
-        android:layout_marginRight="60dp"
-        android:layout_marginEnd="60dp"
-        android:hint="@string/px"
-        android:inputType="number"
-        android:gravity="center"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:background="@color/convertor_gray_light"
-        android:textColor="@color/white"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/pixels" />
 
-        <EditText
-        android:id="@+id/em"
-        android:layout_width="80dp"
-        android:layout_height="50dp"
-        android:hint="@string/em"
-        android:inputType="number"
-        android:gravity="center"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:background="@color/convertor_gray_light"
-        android:textColor="@color/white" />
+            <EditText
+                android:id="@+id/pixels"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:background="@color/convertor_gray_light"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/px"
+                android:inputType="number"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-        <EditText
-        android:id="@+id/points"
-        android:layout_width="80dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginStart="60dp"
-        android:hint="@string/pt"
-        android:inputType="number"
-        android:gravity="center"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:background="@color/convertor_gray_light"
-        android:textColor="@color/white"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/ems" />
+
+            <EditText
+                android:id="@+id/em"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:background="@color/convertor_gray_light"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/em"
+                android:inputType="number"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/points" />
+
+            <EditText
+                android:id="@+id/points"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@color/convertor_gray_light"
+                android:hint="@string/pt"
+                android:inputType="number"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
 
     </LinearLayout>
 
@@ -94,8 +140,8 @@
         android:id="@+id/calculate"
         android:layout_width="125dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
         android:layout_marginStart="0dp"
+        android:layout_marginTop="70dp"
         android:layout_marginEnd="0dp"
         android:text="Calculate" />
 

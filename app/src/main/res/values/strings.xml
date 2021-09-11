@@ -5,4 +5,7 @@
     <string name="px">px</string>
     <string name="em">Em</string>
     <string name="pt">pt</string>
+    <string name="points">Points</string>
+    <string name="ems">Ems</string>
+    <string name="pixels">Pixels</string>
 </resources>
