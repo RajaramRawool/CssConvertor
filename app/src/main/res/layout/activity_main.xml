@@ -83,13 +83,13 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/calculate"
+        android:id="@+id/convert"
         android:layout_width="125dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="0dp"
         android:layout_marginTop="70dp"
         android:layout_marginEnd="0dp"
-        android:text="Calculate" />
+        android:text="Convert" />
 
 
 </LinearLayout>

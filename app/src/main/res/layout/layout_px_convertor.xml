@@ -15,35 +15,32 @@
         android:background="@drawable/round_box"
         android:gravity="center"
         android:hint="@string/px"
+        android:textColorHint="@color/white"
         android:inputType="number"
-        android:text="152"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold" />
 
-    <EditText
+    <TextView
         android:id="@+id/px_em"
         android:layout_width="80dp"
         android:layout_height="50dp"
         android:background="@drawable/round_box"
         android:gravity="center"
         android:hint="@string/em"
-        android:inputType="number"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold" />
 
-    <EditText
+    <TextView
         android:id="@+id/px_points"
         android:layout_width="80dp"
         android:layout_height="50dp"
-        android:layout_gravity="fill_horizontal"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:background="@drawable/round_box"
         android:gravity="center"
         android:hint="@string/pt"
-        android:inputType="number"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold" />
