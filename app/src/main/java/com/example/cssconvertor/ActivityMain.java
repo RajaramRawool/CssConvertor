@@ -33,11 +33,10 @@ public class ActivityMain extends AppCompatActivity {
 
     private void validateUserInput() {
         float pixels = Float.parseFloat(etPixels.getText().toString());
-        float em = Float.parseFloat(etEm.getText().toString());
-        float points = Float.parseFloat(etPoints.getText().toString());
+        etEm.setText(String.valueOf(pixels / 16));
 
 
-
+        etPoints.setText(String.valueOf((int) (pixels * .75)));
     }
 
     private void setViews() {

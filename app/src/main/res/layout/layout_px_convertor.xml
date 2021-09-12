@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:padding="20dp">
+
+    <EditText
+        android:id="@+id/layout_px_pixels"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:background="@drawable/round_box"
+        android:gravity="center"
+        android:layout_marginRight="60dp"
+        android:layout_marginEnd="60dp"
+        android:hint="@string/px"
+        android:inputType="number"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:id="@+id/layout_px_em"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:background="@drawable/round_box"
+        android:gravity="center"
+        android:hint="@string/em"
+        android:inputType="number"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:id="@+id/layout_px_points"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:background="@drawable/round_box"
+        android:gravity="center"
+        android:layout_marginLeft="60dp"
+        android:layout_marginStart="60dp"
+        android:layout_gravity="fill_horizontal"
+        android:hint="@string/pt"
+        android:inputType="number"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        />
+
+
+</LinearLayout>

@@ -28,110 +28,94 @@
         android:textSize="18sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/pixels_ems_points"
-        android:textAlignment="center"
-        android:textColor="@color/convertor_blue"
-        android:textSize="18sp"
-        android:textStyle="bold"
 
-        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="60dp"
+            android:layout_marginRight="60dp"
+            android:gravity="center"
+            android:text="@string/pixels"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            tools:ignore="SmallSp" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/ems"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            tools:ignore="SmallSp" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="60dp"
+            android:gravity="center"
+            android:text="@string/points"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            tools:ignore="SmallSp" />
+    </LinearLayout>
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginEnd="0dp"
-            android:layout_marginRight="0dp"
-            android:layout_weight="1">
+        <EditText
+            android:id="@+id/pixels"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginRight="60dp"
+            android:background="@drawable/round_box"
+            android:gravity="center"
+            android:hint="@string/px"
+            android:inputType="number"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/pixels" />
+        <EditText
+            android:id="@+id/em"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round_box"
+            android:gravity="center"
+            android:hint="@string/em"
+            android:inputType="number"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/pixels"
-                android:layout_width="80dp"
-                android:layout_height="50dp"
-                android:background="@color/convertor_gray_light"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:hint="@string/px"
-                android:inputType="number"
-                android:textColor="@color/white"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1">
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/ems" />
-
-            <EditText
-                android:id="@+id/em"
-                android:layout_width="80dp"
-                android:layout_height="50dp"
-                android:background="@color/convertor_gray_light"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:hint="@string/em"
-                android:inputType="number"
-                android:textColor="@color/white"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/points" />
-
-            <EditText
-                android:id="@+id/points"
-                android:layout_width="80dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:background="@color/convertor_gray_light"
-                android:hint="@string/pt"
-                android:inputType="number"
-                android:textColor="@color/white"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-
-        </LinearLayout>
+        <EditText
+            android:id="@+id/points"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_gravity="fill_horizontal"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="60dp"
+            android:background="@drawable/round_box"
+            android:gravity="center"
+            android:hint="@string/pt"
+            android:inputType="number"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
 
     </LinearLayout>
