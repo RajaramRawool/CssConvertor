@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/layout_px_convertor"
+    android:id="@+id/layout_points_convertor"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center"
     android:orientation="horizontal">
 
     <EditText
-        android:id="@+id/px_pixels"
+        android:id="@+id/points_pixels"
         android:layout_width="80dp"
         android:layout_height="50dp"
         android:layout_marginEnd="50dp"
@@ -16,13 +16,12 @@
         android:gravity="center"
         android:hint="@string/px"
         android:inputType="number"
-        android:text="152"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/px_em"
+        android:id="@+id/points_em"
         android:layout_width="80dp"
         android:layout_height="50dp"
         android:background="@drawable/round_box"
@@ -34,7 +33,7 @@
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/px_points"
+        android:id="@+id/points_points"
         android:layout_width="80dp"
         android:layout_height="50dp"
         android:layout_gravity="fill_horizontal"

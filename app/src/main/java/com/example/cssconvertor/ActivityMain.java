@@ -3,15 +3,19 @@ package com.example.cssconvertor;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class ActivityMain extends AppCompatActivity {
     EditText etPixels;
     EditText etEm;
     EditText etPoints;
-    Button btCalculate;
+    Button btCalculate, btPixels, btEms, btPoints;
+    LinearLayout llConvertor ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,20 +33,29 @@ public class ActivityMain extends AppCompatActivity {
                 validateUserInput();
             }
         });
+
+        btPixels.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                View view = getLayoutInflater().inflate(R.layout.layout_px_convertor, null, false );
+                llConvertor.addView(view);
+
+
+            }
+        });
+
     }
 
     private void validateUserInput() {
-        float pixels = Float.parseFloat(etPixels.getText().toString());
-        etEm.setText(String.valueOf(pixels / 16));
 
-
-        etPoints.setText(String.valueOf((int) (pixels * .75)));
     }
 
     private void setViews() {
-        etPixels = findViewById(R.id.pixels);
-        etEm = findViewById(R.id.em);
-        etPoints = findViewById(R.id.points);
+
         btCalculate = findViewById(R.id.calculate);
+        btPixels = findViewById(R.id.button_pixels);
+        btEms = findViewById(R.id.button_ems);
+        btPoints = findViewById(R.id.button_points);
+        llConvertor = findViewById(R.id.layout_convertor);
     }
 }
