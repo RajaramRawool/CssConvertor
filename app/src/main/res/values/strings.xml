@@ -8,4 +8,5 @@
     <string name="pixels">Pixels</string>
     <string name="ems">Ems</string>
     <string name="points">Points</string>
+    <string name="note_default_font_size_is">* Note :- Default font size is</string>
 </resources>

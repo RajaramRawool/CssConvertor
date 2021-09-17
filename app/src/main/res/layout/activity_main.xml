@@ -296,6 +296,34 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/note_default_font_size_is"
+            android:textColor="@color/convertor_gray_dark"/>
+        <EditText
+            android:id="@+id/default_font_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:text="16"
+            android:textSize="16sp"
+            android:textColor="@color/convertor_blue"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="px"
+            android:textColor="@color/convertor_gray_dark"/>
+
+
+    </LinearLayout>
+
 
     <Button
         android:id="@+id/convert"
