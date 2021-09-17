@@ -11,9 +11,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class ActivityMain extends AppCompatActivity {
-    EditText etPixels, etEms, etPoints,etTemp;
+    EditText etPixels, etEms, etPoints, etDefaultFontSize;
     TextView tvPxToEm, tvPxToPt, tvEmToPx, tvEmToPt, tvPtToPx, tvPtToEm, tvTemp;
-    Button btConvert, btPixels, btEms, btPoints;
+    Button btConvert;
     LinearLayout llConvertor ;
 
 
@@ -31,32 +31,38 @@ public class ActivityMain extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 validate();
-                convertPx();
-                convertEms();
-                convertPoints();
+                convert();
+
             }
         });
 
 
     }
 
-    private void convertPoints() {
-        int points = Integer.parseInt(etPoints.getText().toString());
-        tvPtToPx.setText(String.valueOf((int)(points * 1.34)));
-        tvPtToEm.setText(String.valueOf(points / 12));
+    private void convert() {
+        int defaultFontSize = Integer.parseInt(etDefaultFontSize.getText().toString());
+        convertPx();
+        convertEms();
+        convertPoints();
     }
+        private void convertPoints() {
+            int points = Integer.parseInt(etPoints.getText().toString());
+            tvPtToPx.setText(String.valueOf((points * 1.34)));
+            tvPtToEm.setText(String.valueOf(points / 12));
+        }
 
-    private void convertEms() {
-        float ems = Float.parseFloat(etEms.getText().toString());
-        tvEmToPx.setText(String.valueOf(ems * 16));
-        tvEmToPt.setText(String.valueOf(ems * 12.0));
-    }
+        private void convertEms() {
+            float ems = Float.parseFloat(etEms.getText().toString());
+            tvEmToPx.setText(String.valueOf(ems * (Integer.parseInt(etDefaultFontSize.getText().toString()))));
+            tvEmToPt.setText(String.valueOf((int)(ems * 12.0)));
+        }
 
-    private void convertPx() {
-        float pixels = Float.parseFloat(etPixels.getText().toString());
-        tvPxToEm.setText(String.valueOf(pixels/16));
-        tvPxToPt.setText(String.valueOf(pixels * 0.75));
-    }
+        private void convertPx() {
+            float pixels = Float.parseFloat(etPixels.getText().toString());
+            tvPxToEm.setText(String.valueOf(pixels/(Integer.parseInt(etDefaultFontSize.getText().toString()))));
+            tvPxToPt.setText(String.valueOf((int)(pixels * 0.75)));
+        }
+
 
     private void validate() {
         if (etPixels.getText().toString().isEmpty()) {
@@ -75,6 +81,7 @@ public class ActivityMain extends AppCompatActivity {
         etPixels = findViewById(R.id.px_pixels);
         etEms = findViewById(R.id.ems_em);
         etPoints = findViewById(R.id.points_points);
+        etDefaultFontSize = findViewById(R.id.default_font_size);
 //        TextViews
         tvPxToEm = findViewById(R.id.px_em);
         tvPxToPt = findViewById(R.id.px_points);
