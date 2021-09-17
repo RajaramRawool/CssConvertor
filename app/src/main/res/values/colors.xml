@@ -10,6 +10,7 @@
     <color name="convertor_blue">#264DE4</color>
     <color name="convertor_gray_dark">#4E626B</color>
     <color name="convertor_gray_light">#849AA5</color>
+    <color name="convertor_gray_white">#E5E5E5</color>
 
 
 </resources>

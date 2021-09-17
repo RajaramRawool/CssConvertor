@@ -11,8 +11,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class ActivityMain extends AppCompatActivity {
-    EditText etPixels, etEms, etPoints;
-    TextView tvPxToEm, tvPxToPt, tvEmToPx, tvEmToPt, tvPtToPx, tvPtToEm;
+    EditText etPixels, etEms, etPoints,etTemp;
+    TextView tvPxToEm, tvPxToPt, tvEmToPx, tvEmToPt, tvPtToPx, tvPtToEm, tvTemp;
     Button btConvert, btPixels, btEms, btPoints;
     LinearLayout llConvertor ;
 
@@ -29,37 +29,44 @@ public class ActivityMain extends AppCompatActivity {
         btConvert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-//                Toast.makeText(ActivityMain.this,"Hi!",Toast.LENGTH_SHORT).show();
-
+                validate();
+                convertPx();
+                convertEms();
+                convertPoints();
             }
         });
 
-        btPixels.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                View view = getLayoutInflater().inflate(R.layout.layout_px_convertor, null, false );
-                llConvertor.removeAllViews();
-                llConvertor.addView(view);
-            }
-        });
-        btEms.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                View view = getLayoutInflater().inflate(R.layout.layout_ems_convertor,null, false);
-                llConvertor.removeAllViews();
-                llConvertor.addView(view);
-            }
-        });
 
-        btPoints.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                View view = getLayoutInflater().inflate(R.layout.layout_points_convertor,null, false);
-                llConvertor.removeAllViews();
-                llConvertor.addView(view);
-            }
-        });
+    }
+
+    private void convertPoints() {
+        int points = Integer.parseInt(etPoints.getText().toString());
+        tvPtToPx.setText(String.valueOf((int)(points * 1.34)));
+        tvPtToEm.setText(String.valueOf(points / 12));
+    }
+
+    private void convertEms() {
+        float ems = Float.parseFloat(etEms.getText().toString());
+        tvEmToPx.setText(String.valueOf(ems * 16));
+        tvEmToPt.setText(String.valueOf(ems * 12.0));
+    }
+
+    private void convertPx() {
+        float pixels = Float.parseFloat(etPixels.getText().toString());
+        tvPxToEm.setText(String.valueOf(pixels/16));
+        tvPxToPt.setText(String.valueOf(pixels * 0.75));
+    }
+
+    private void validate() {
+        if (etPixels.getText().toString().isEmpty()) {
+            etPixels.setText("0");
+        }
+        if (etEms.getText().toString().isEmpty()) {
+            etEms.setText("0");
+        }
+        if (etPoints.getText().toString().isEmpty()) {
+            etPoints.setText("0");
+        }
     }
 
     private void setViews() {
@@ -76,9 +83,6 @@ public class ActivityMain extends AppCompatActivity {
         tvPtToEm = findViewById(R.id.points_em);
 //        Buttons
         btConvert = findViewById(R.id.convert);
-        btPixels = findViewById(R.id.button_pixels);
-        btEms = findViewById(R.id.button_ems);
-        btPoints = findViewById(R.id.button_points);
 //        LinearLayout
         llConvertor = findViewById(R.id.layout_convertor);
     }
