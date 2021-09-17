@@ -47,7 +47,7 @@ public class ActivityMain extends AppCompatActivity {
     }
         private void convertPoints() {
             int points = Integer.parseInt(etPoints.getText().toString());
-            tvPtToPx.setText(String.valueOf((points * 1.34)));
+            tvPtToPx.setText(String.valueOf((Math.round(points * 1.34)/100.0)));
             tvPtToEm.setText(String.valueOf(points / 12));
         }
 
