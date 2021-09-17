@@ -9,13 +9,14 @@
         android:roundIcon="@mipmap/css_convertor_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.CssConvertor">
-        <activity android:name=".ActivityMain">
+        <activity android:name=".ActivitySplash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ActivityMain"/>
     </application>
 
 </manifest>
